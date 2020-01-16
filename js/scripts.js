@@ -1,43 +1,30 @@
 $(document).ready(function() {
   $("form#myForm").submit(function(event) {
     event.preventDefault();
-    var rollerCoaster = parseInt($("input#q1").val());
-    var score = 0;
+    
+    var scoreOne = parseInt($("#q1").val());
+    var scoreTwo = parseInt($("#q2").val());
+    var scoreThree = parseInt($("#q3").val());
+    var scoreFour = parseInt($("#q4").val());
+    var scoreFive = parseInt($("#q5").val());
+    
+    var totalScore = (scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive)
 
-    if (rollerCoaster === 10) {
-      score = 10;
-      alert(score);
-    } else if (rollerCoaster < 10 && rollerCoaster >= 5) {
-      score = 5;
-      alert(score);
-    } else {
-      score = 0;
-      alert(score);
-    }
+    alert(totalScore);
 
     
-    //////////////////front end//////////////////
-    if (score >= 10) {
-      $("#result").show();
-      $("#celebName").empty().append("Keanu Reeves");
-      $("#totalScore").empty().append(" " + score);
-      // show #result
-      // show #celebName
-      // show #totalScore
-      // your match is Keanu Reeves
-    } else if (score ===5) {
-      $("#result").show();
-      $("#celebName").empty().append("Danny Devito");
-      $("#totalScore").empty().append(" " + score);
-      // your natch is danny devito
-    } else { 
-      $("#result").show();
-      $("#celebName").empty().append("Hulk Hogan");
-      $("#totalScore").empty().append(" " + score);
-      // your match is hulk hogan
-  
-    }
 
-
+    if (totalScore >=30) {
+       alert("Kramer"); 
+      }  else if (totalScore >= 20 && totalScore < 30 ){
+      alert("Dwight");
+      }  else if (totalScore < 20) {
+        alert("Veronica Mars");
+      }
   });
 });
+
+    
+   
+
+ 
