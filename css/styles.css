@@ -1,16 +1,7 @@
-img {
-  max-width: 50%;
+.btn {
+  display: block;
 }
 
-#snake-info {
-display: none;
-}
-
-#shark-info {
-  display: none; 
-
-}
-
-#giraffe-info {
+#result {
   display: none;
 }

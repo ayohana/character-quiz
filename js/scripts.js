@@ -1,16 +1,43 @@
-$(document).ready(function() { 
-  $("form").submit(function(event) {
+$(document).ready(function() {
+  $("form#myForm").submit(function(event) {
     event.preventDefault();
-    var choice = $("input:radio[name=animals]:checked", "#myForm").val(); 
-    
-    ///front///
+    var rollerCoaster = parseInt($("input#q1").val());
+    var score = 0;
 
-    if (choice === "snake") {
-      $("#snake-info").show();
-      } else if (choice === "shark") {
-        $("#shark-info").show();
-      } else if (choice === "giraffe") {
-        $("#giraffe-info").show();
-      }
+    if (rollerCoaster === 10) {
+      score = 10;
+      alert(score);
+    } else if (rollerCoaster < 10 && rollerCoaster >= 5) {
+      score = 5;
+      alert(score);
+    } else {
+      score = 0;
+      alert(score);
+    }
+
+    
+    //////////////////front end//////////////////
+    if (score >= 10) {
+      $("#result").show();
+      $("#celebName").empty().append("Keanu Reeves");
+      $("#totalScore").empty().append(" " + score);
+      // show #result
+      // show #celebName
+      // show #totalScore
+      // your match is Keanu Reeves
+    } else if (score ===5) {
+      $("#result").show();
+      $("#celebName").empty().append("Danny Devito");
+      $("#totalScore").empty().append(" " + score);
+      // your natch is danny devito
+    } else { 
+      $("#result").show();
+      $("#celebName").empty().append("Hulk Hogan");
+      $("#totalScore").empty().append(" " + score);
+      // your match is hulk hogan
+  
+    }
+
+
   });
 });
