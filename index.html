@@ -11,13 +11,22 @@
 
 <body>
   <div class="container">
-    <div class="jumbotron">
+    <br>
+    <div class="jumbotron2 jumbotron text-center">
     <h1>Character Quiz</h1>
+    <p>Answer a series of questions in order for the application to reccomend a character match, based on the answers given.</p>
+    </div>
+  </div>
+  <br>
+  <div class="container2 text-center">
+    <div id="result">
+      <img src="img/kramer.jpg" id="result-kramer">
+      <img src="img/dwight.jpg" id="result-dwight">
+      <img src="img/veronica.png" id="result-veronica">
     </div>
   </div>
 
   <div class="container">
-    <p>answer a series of questions in order for the application to reccomend a character match, based on the answers given.</p>
     <hr>
     <br>
     <form id="myForm">
@@ -49,18 +58,15 @@
       <select class="form-control" id="q5">
         <option value=5>True</option>
         <option value=0>False</option>
-      </select>
+      </select><br>
+      <hr>
 
       <button type="submit" class="btn btn-primary">JUDGE ME</button>
-    </form>
+    </form><br>
 
     </div>
+<br>
 
-    <div class="container">
-      <div id="result">
-        <p>You've been given the result of... <strong><span id="celebName"></span></strong> based on the score of<span id="totalScore"></span></p>
-      </div>
-    </div>
 
 
     
